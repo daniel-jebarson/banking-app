@@ -56,4 +56,13 @@ public class Person {
 
     @OneToOne(mappedBy = "person", cascade = CascadeType.ALL, orphanRemoval = true)
     private Customer customer;
+
+    public Person( String lname,String fname, String email, Date dob,  String number,String address) {
+        this.firstName=fname;
+        this.lastName=lname;
+        this.email=email;
+        this.dateOfBirth=dob;
+        this.phoneNumber=number;
+        this.address=address;
+    }
 }
