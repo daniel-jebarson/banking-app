@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class BranchServiceImpl implements BranchService {
 
-    private BranchRepo branchRepo;
+    private final BranchRepo branchRepo;
 
     public BranchServiceImpl(BranchRepo branchRepo) {
         this.branchRepo = branchRepo;
