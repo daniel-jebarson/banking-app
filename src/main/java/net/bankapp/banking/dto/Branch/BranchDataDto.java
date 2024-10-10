@@ -1,12 +1,16 @@
-package net.bankapp.banking.dto;
+package net.bankapp.banking.dto.Branch;
 
-import jakarta.validation.constraints.*;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class BranchDto {
+public class BranchDataDto {
+
+    @NotBlank(message = "Code is mandatory")
+    private Integer id;
 
     @NotBlank(message = "Branch name is required")
     @Size(max = 100, message = "Branch name must be less than 100 characters")
@@ -22,6 +26,5 @@ public class BranchDto {
 
     @NotBlank(message = "Phone number is required")
     @Size(max = 20, message = "Phone number must be less than 20 characters",min =10)
-    private String phoneNumber;
-
+    private String number;
 }

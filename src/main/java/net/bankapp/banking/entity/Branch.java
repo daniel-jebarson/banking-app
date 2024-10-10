@@ -53,4 +53,13 @@ public class Branch  {
         this.phoneNumber = phoneNumber;
     }
 
+    // Constructor with parameters
+    public Branch(Integer branchId,String branchName, String branchCode, String address, String phoneNumber) {
+        this.branchId=branchId;
+        this.branchName = branchName;
+        this.branchCode = branchCode;
+        this.address = address;
+        this.phoneNumber = phoneNumber;
+    }
+
 }
